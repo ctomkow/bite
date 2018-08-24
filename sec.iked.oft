@@ -1,0 +1,3 @@
+sudo iked
+# need to be in home dir to execute next line
+ikec -r gateway.config.file.vpn -u username -p password -a

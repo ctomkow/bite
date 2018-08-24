@@ -1,0 +1,9 @@
+# add rule to specific line number
+sudo iptables -I FORWARD 9 -i tap0 -o virbr0 -j ACCEPT
+
+# delete rule
+sudo iptables -D FORWARD 9
+
+# list rules in detail
+sudo iptables -L FORWARD -n -v --line-numbers
+

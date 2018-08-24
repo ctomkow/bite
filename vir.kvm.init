@@ -1,0 +1,9 @@
+sudo virt-install --name=ansible-test \ # sudo required for local location of ISO
+--vcpus=1 \
+--memory=4096 \ # in MB
+--disk size=20 \ # in GB
+--os-variant=centos7.0 \
+--network bridge=virbr0 \ # virbr0 for NAT. use br0 for bridge (public IP)
+--graphics none \
+--location=Downloads/CentOS-7-x86_64-Minimal-1804.iso \
+--extra-args='console=ttyS0' # kernel parameter for a console connection

@@ -1,0 +1,26 @@
+# structure of howto's
+[domain].[program].[action]
+
+# only 3 levels deep!
+# there are pre-defined names for each level. DO NOT STRAY FROM THEM.
+
+# Example
+ver.git.oft
+
+# Domains
+net
+src
+ver
+dbs
+vir
+sys
+
+# Program
+git
+iptables
+firewalld
+
+# Action
+oft # often used commands
+init # initialize the program
+

@@ -1,0 +1,4 @@
+# Add file to index, store index in new commit with comment, push commit to remote 
+git add <file>
+git commit -m "My code comments"
+git push -u origin master

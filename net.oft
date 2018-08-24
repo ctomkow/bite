@@ -1,0 +1,12 @@
+# restart ubuntu networking
+sudo service network-manager restart
+
+# restart centos networking
+sudo service network restart
+
+# list bridges
+brctl show
+
+# bridge traffic flows through iptables by default (host rules blocking traffic)
+echo "0" > /proc/sys/net/bridge/bridge-nf-call-iptables
+echo "0" > /proc/sys/net/bridge/bridge-nf-call-ip6tables
