@@ -3,11 +3,21 @@ sudo yum install firewalld
 sudo systemctl enable firewalld
 sudo reboot
 
+# reload fw
+sudo firewall-cmd --reload
+
 # verify centos fw state
 sudo firewall-cmd --state
+sudo systemctl status firewalld
 
 # get fw default zone
 sudo firewall-cmd --get-default-zone
+
+# view all fw zones
+sudo firewall-cmd --list-all-zones
+
+# view all permanent fw zones (not yet in effect)
+sudo firewall-cmd --permanent --get-zones
 
 # view fw zone config
 sudo firewall-cmd --zone=public --list-all
@@ -17,3 +27,17 @@ sudo firewall-cmd --zone=drop --change-interface=eth0
 
 # set default fw zone
 sudo firewall-cmd --set-default-zone=drop
+
+# add services
+sudo firewall-cmd --zone=dmz --add-service=ssh --permanent
+
+# create zone
+sudo firewall-cmd --permanent --new-zone=test
+
+# add rich rule
+sudo firewall-cmd --permanent --zone=test --add-rich-rule='rule family=ipv4 source address=x.x.x.x accept'
+
+# restrict by IP
+remove interface (or move to other zone), now add source to zone
+
+sudo firewall-cmd --zone=test --add-source=x.x.x.x/xx

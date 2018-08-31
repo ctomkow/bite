@@ -1,0 +1,15 @@
+# run at boot - centos7
+# create systemd startup script
+vm-traffic-no-traverse-iptables.service
+
+# e.g.
+blah blah
+
+# script
+asdf
+
+
+
+# run at boot - ubuntu 18.04
+...
+

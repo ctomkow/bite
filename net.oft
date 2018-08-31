@@ -7,6 +7,17 @@ sudo service network restart
 # list bridges
 brctl show
 
+# note on VIM to edit /proc
+Editor is doing funny things (may get a 'Fsync failed').
+/proc items are not files, they are interfaces to lower-levels of the OS.
+Should be using echo ...
+
+echo "1" | sudo dd of=/proc/sys/net/ipv4/tcp_timestamps
+
 # bridge traffic flows through iptables by default (host rules blocking traffic)
-echo "0" > /proc/sys/net/bridge/bridge-nf-call-iptables
-echo "0" > /proc/sys/net/bridge/bridge-nf-call-ip6tables
+echo "0" | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-iptables
+echo "0" | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-ip6tables
+
+# list active sockets
+ss -l
+netstat -l

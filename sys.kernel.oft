@@ -1,0 +1,2 @@
+# set kernel parameters on boot - Debian
+/etc/sysctl.d/*.conf

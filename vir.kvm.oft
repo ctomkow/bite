@@ -16,3 +16,6 @@ sudo rm /var/lib/libvirt/images/ansible-test.qcow2
 # networking
 virbr0 # nat (private ip)
 br0 # bridged (vm get's own ip)
+
+# add share between guest and host
+https://xapax.github.io/blog/2017/05/09/sharing-files-kvm.html
