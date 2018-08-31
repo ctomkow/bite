@@ -17,6 +17,7 @@ echo "1" | sudo dd of=/proc/sys/net/ipv4/tcp_timestamps
 # bridge traffic flows through iptables by default (host rules blocking traffic)
 echo "0" | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-iptables
 echo "0" | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-ip6tables
+echo "0" | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-arptables
 
 # list active sockets
 ss -l
