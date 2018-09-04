@@ -2,3 +2,12 @@
 git add <file>
 git commit -m "My code comments"
 git push -u origin master
+
+# List tracked files
+git ls-files
+
+# Show commit history
+git log
+
+# Revery commit (that is NOT pushed)
+git reset --hard <hash>

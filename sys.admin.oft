@@ -1,0 +1,3 @@
+# Show OS info
+lsb_release -a
+lsb_release -d
