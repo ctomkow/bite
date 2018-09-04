@@ -1,3 +1,6 @@
 # Show OS info
 lsb_release -a
 lsb_release -d
+
+# Show more file details (permission octets)
+stat <file>
