@@ -7,3 +7,21 @@ docker login
 
 # list containers
 docker ps
+
+# grab new image from docker hub
+docker pull centos:6.9
+
+# view pulled images
+docker images
+
+# run container with terminal and detached
+docker run -t -d centos:6.9
+
+# stop container immediately
+docker stop -t0 <hash>
+
+# connect to container
+docker exec -i -t <hash> bash
+
+# run container in background and make ports available
+docker run -dP centos:6.9
