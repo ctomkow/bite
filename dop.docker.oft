@@ -1,0 +1,9 @@
+# don't need to sudo all the time (add user to 'docker' group)
+sudo groupadd docker
+sudo usermod -aG docker <user>
+
+# login
+docker login
+
+# list containers
+docker ps
