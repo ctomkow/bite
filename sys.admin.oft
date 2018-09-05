@@ -4,3 +4,6 @@ lsb_release -d
 
 # Show more file details (permission octets)
 stat <file>
+
+# Add user to group
+usermod -a -G <group> <user>
