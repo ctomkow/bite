@@ -1,0 +1,5 @@
+# login
+mysql -u <user> -p
+
+# status
+mysqladmin -u <user> -p status
