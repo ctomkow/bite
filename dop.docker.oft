@@ -25,3 +25,11 @@ docker exec -i -t <hash> bash
 
 # run container in background and make ports available
 docker run -dP centos:6.9
+
+#delete
+# delete container first
+docker ps -a # list containers
+docker rm <container id>
+docker images -a # list images
+docker rmi <image id>
+

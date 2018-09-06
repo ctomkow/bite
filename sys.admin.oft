@@ -10,3 +10,6 @@ usermod -a -G <group> <user>
 
 # centos 6.* start service
 service <service> start
+
+# show disk usage of folder
+du -sh <file_path>
