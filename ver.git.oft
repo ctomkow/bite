@@ -9,5 +9,8 @@ git ls-files
 # Show commit history
 git log
 
-# Revery commit (that is NOT pushed)
+# Revert commit (that is NOT pushed)
 git reset --hard <hash>
+
+# Show diff before commit
+git diff <file>
