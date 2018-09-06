@@ -7,3 +7,6 @@ stat <file>
 
 # Add user to group
 usermod -a -G <group> <user>
+
+# centos 6.* start service
+service <service> start
