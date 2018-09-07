@@ -1,0 +1,5 @@
+# snmp walk
+snmpwalk -Os -c <community> -v1 <host> <OID>
+
+# snmp get
+snmpget -c <community> -v1 <host> <OID>
