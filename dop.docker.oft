@@ -32,4 +32,8 @@ docker ps -a # list containers
 docker rm <container id>
 docker images -a # list images
 docker rmi <image id>
+# delete all containers
+docker rm $(docker ps -aq)
+# delete all images
+docker rmi $(docker images -q)
 
