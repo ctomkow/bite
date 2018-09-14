@@ -14,3 +14,11 @@ git reset --hard <hash>
 
 # Show diff before commit
 git diff <file>
+
+# brach workflow
+local branch
+    <branch>/<name>
+    bug/foo
+    feat/bar
+    wip/foobar
+    junk/barfoo
