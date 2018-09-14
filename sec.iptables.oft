@@ -7,3 +7,5 @@ sudo iptables -D FORWARD 9
 # list rules in detail
 sudo iptables -L FORWARD -n -v --line-numbers
 
+# deny icmp on ufw
+sudo iptables -I ufw-before-input 5 -i br0 -p icmp -j DROP
