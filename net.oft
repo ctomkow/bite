@@ -22,3 +22,6 @@ echo "0" | sudo dd of=/proc/sys/net/bridge/bridge-nf-call-arptables
 # list active sockets
 ss -l
 netstat -l
+
+# enable routing (ip_forwarding)
+echo "1" | sudo dd of=/proc/sys/net/ipv4/ip_forward
