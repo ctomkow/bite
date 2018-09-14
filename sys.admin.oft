@@ -16,3 +16,9 @@ du -sh <file_path>
 
 # copy files from remote
 scp user@remote.host:/path/to/file /local/dir
+
+# diff two folders
+diff --brief -r dirA/ dirB/
+
+# diff folder structure
+vimdiff <(cd dir1; find . | sort) <(cd dir2; find . | sort)
