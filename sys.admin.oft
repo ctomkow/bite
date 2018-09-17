@@ -22,3 +22,6 @@ diff --brief -r dirA/ dirB/
 
 # diff folder structure
 vimdiff <(cd dir1; find . | sort) <(cd dir2; find . | sort)
+
+# yum find package
+yum whatprovides *xxxx.so
