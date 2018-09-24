@@ -5,6 +5,12 @@ lsb_release -d
 # Show more file details (permission octets)
 stat <file>
 
+# Add user (creates home dir also)
+adduser <user>
+
+# Change password of user
+passwd <user>
+
 # Add user to group
 usermod -a -G <group> <user>
 
