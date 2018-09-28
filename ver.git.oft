@@ -20,5 +20,22 @@ local branch
     <branch>/<name>
     bug/foo
     feat/bar
+    refac/fizz
     wip/foobar
     junk/barfoo
+
+# create branch and switch to it
+git checkout -b <branch_name>
+
+# change working branch
+git checkout <branch_name>
+
+# see all branches
+git branch
+
+# safe merge
+(dev branch)$ git merge master
+(resolve conflicts on dev branch)
+git checkout master
+git merge <dev-branch>
+
