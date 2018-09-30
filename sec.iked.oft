@@ -1,3 +1,9 @@
+##### IKEd #####
+#
+# launch daemon
 sudo iked
+
+# add conf files to .ike
+
 # need to be in home dir to execute next line
-ikec -r gateway.config.file.vpn -u username -p password -a
+ikec -r gateway.config.file.vpn -u <username> -p <password> -a
