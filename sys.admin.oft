@@ -1,33 +1,54 @@
-# Show OS info
-lsb_release -a
+##### CENTOS #####
+#
+# service mgmt - centos 6
+service <srvd> [start|stop|restart]
+
+# find package
+yum whatprovides *xxxxx.so
+
+##### DEBIAN #####
+#
+# service mgmt - <= ubuntu 14.10
+[start|stop|restart] <srvd>
+
+# find package
+apt-cache search xxxxx
+
+
+##### DISTRO AGNOSTIC #####
+#
+# display OS info
 lsb_release -d
 
-# Show more file details (permission octets)
+# service mgmt (systemd) >= centos7/ubuntu 15.04
+systemctl [start|stop|restart] <srvd>
+
+##### FILES
+#
+# display file permission octets
 stat <file>
 
-# Add user (creates home dir also)
-adduser <user>
-
-# Change password of user
-passwd <user>
-
-# Add user to group
-usermod -a -G <group> <user>
-
-# centos 6.* start service
-service <service> start
-
-# show disk usage of folder
-du -sh <file_path>
-
-# copy files from remote
-scp user@remote.host:/path/to/file /local/dir
+# show disk usage of dir
+du -sh <directory>
 
 # diff two folders
-diff --brief -r dirA/ dirB/
+diff --brief -r <dirA>/ <dirB>/
 
 # diff folder structure
-vimdiff <(cd dir1; find . | sort) <(cd dir2; find . | sort)
+vimdiff <(cd dirA; find . | sort) <(cd dirB; find . | sort)
 
-# yum find package
-yum whatprovides *xxxx.so
+# copy remote files
+scp user@remote.host:/path/to/file /local/dir
+
+##### USERS
+#
+# add user and create home dir
+adduser <user>
+
+# change password of user
+passwd <user>
+
+# add user to group
+usermod -a -G <group> <user>
+
+
