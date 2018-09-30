@@ -1,16 +1,16 @@
+##### NETWORKING #####
+#
 # restart ubuntu networking
-sudo service network-manager restart
+service network-manager restart
 
 # restart centos networking
-sudo service network restart
+service network restart
 
 # list bridges
 brctl show
 
 # note on VIM to edit /proc
-Editor is doing funny things (may get a 'Fsync failed').
 /proc items are not files, they are interfaces to lower-levels of the OS.
-Should be using echo ...
 
 echo "1" | sudo dd of=/proc/sys/net/ipv4/tcp_timestamps
 

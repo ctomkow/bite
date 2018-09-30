@@ -1,2 +1,4 @@
+##### TCPDUMP #####
+#
 # capture host showing MAC addr
-sudo tcpdump host 8.8.8.8 -e
+tcpdump host 8.8.8.8 -e

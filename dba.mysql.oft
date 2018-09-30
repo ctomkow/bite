@@ -1,3 +1,5 @@
+##### MYSQL #####
+#
 # login
 mysql -u <user> -p
 

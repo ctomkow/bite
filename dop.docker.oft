@@ -1,17 +1,19 @@
-# don't need to sudo all the time (add user to 'docker' group)
-sudo groupadd docker
-sudo usermod -aG docker <user>
+##### DOCKER #####
+#
+# add user to 'docker' group (reduce use of 'sudo')
+groupadd docker
+usermod -aG docker <user>
 
-# login
+# login to docker hub
 docker login
 
-# list containers
-docker ps
+# list all containers
+docker ps -a
 
 # grab new image from docker hub
 docker pull centos:6.9
 
-# view pulled images
+# view images
 docker images
 
 # run container with terminal and detached
@@ -29,14 +31,15 @@ docker exec -i -t <hash> bash
 # run container in background and make ports available
 docker run -dP centos:6.9
 
-#delete
-# delete container first
-docker ps -a # list containers
-docker rm <container id>
-docker images -a # list images
-docker rmi <image id>
+# delete container
+docker rm <container_id>
+
+# delete image
+docker rmi <image_id>
+
 # delete all containers
 docker rm $(docker ps -aq)
+
 # delete all images
 docker rmi $(docker images -q)
 
