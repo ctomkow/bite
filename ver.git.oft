@@ -20,6 +20,9 @@ git add <file>
 git commit -m "code comments"
 git push -u origin master
 
+# remove file
+git rm <file>
+
 ##### BRANCH #####
 #
 # list branches
