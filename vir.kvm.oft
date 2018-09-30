@@ -1,21 +1,27 @@
+##### KVM #####
+#
+# show all VMs
 virsh list --all
-virsh start ansible-test
-virsh shutdown ansible-test
-virsh destroy ansible-test # forcibly shutdown
-(connect) virsh console <domain>
-(connect) virsh console 4
-(disconnect) CTRL + Shift + ]
+
+# start, stop, forcibly stop VMs
+virsh [start|shutdown|destroy] <vm_desc>
+
+# connect to VM 
+virsh console [vm_desc|id]
+
+# disconnect VM
+CTRL + Shift + ]
 
 # edit existing vm config
-virsh edit ansible-test
+virsh edit <vm_desc>
 
-# delete a vm
-virsh undefine ansible-test
-sudo rm /var/lib/libvirt/images/ansible-test.qcow2
+# delete VM
+virsh undefine <vm_desc>
+sudo rm /var/lib/libvirt/images/<vm_desc>.qcow2
 
 # networking
 virbr0 # nat (private ip)
-br0 # bridged (vm get's own ip)
+br0    # bridged (vm get's own ip)
 
 # add share between guest and host
 https://xapax.github.io/blog/2017/05/09/sharing-files-kvm.html
