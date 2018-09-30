@@ -38,7 +38,7 @@ system
 python
 tcpdump
 
-### ACTION
+### ACTION|TYPE
 oft  # often used commands
 init # initialization
 c    # C      code
