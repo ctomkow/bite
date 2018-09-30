@@ -1,9 +1,10 @@
-# run at boot - centos6
-chkconfig <service> on
+##### CENTOS #####
+#
+# run at boot - centos 6
 chkconfig
+chkconfig <srvd> on
 
-# run at boot - centos7
-# create systemd startup script
+# run at boot - centos 7 (systemd startup script)
 vm-traffic-no-traverse-iptables.service
 
 # e.g.
@@ -12,8 +13,7 @@ blah blah
 # script
 asdf
 
-
-
-# run at boot - ubuntu 18.04
+##### DEBIAN #####
+# run at boot - ubuntu
 ...
 
