@@ -39,4 +39,5 @@ tcpdump
 ### ACTION
 oft  # often used commands
 init # initialization
-
+c    # C code
+py   # python code
