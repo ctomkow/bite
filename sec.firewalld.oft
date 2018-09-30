@@ -1,43 +1,49 @@
-# centos firewall manager for iptables
-sudo yum install firewalld
-sudo systemctl enable firewalld
-sudo reboot
+##### FIREWALLD #####
+#
+# centos firewall manager
 
-# reload fw
-sudo firewall-cmd --reload
+# install
+yum install firewalld
 
-# verify centos fw state
-sudo firewall-cmd --state
-sudo systemctl status firewalld
+# start service
+systemctl enable firewalld
 
-# get fw default zone
-sudo firewall-cmd --get-default-zone
+# reload firewall
+firewall-cmd --reload
 
-# view all fw zones
-sudo firewall-cmd --list-all-zones
+# verify state
+firewall-cmd --state
+systemctl status firewalld
 
-# view all permanent fw zones (not yet in effect)
-sudo firewall-cmd --permanent --get-zones
+# get firewall default zone
+firewall-cmd --get-default-zone
 
-# view fw zone config
-sudo firewall-cmd --zone=public --list-all
+# view all firewall zones
+firewall-cmd --list-all-zones
 
-# set fw zone
-sudo firewall-cmd --zone=drop --change-interface=eth0
+# view all permanent firewall zones (not yet in effect)
+firewall-cmd --permanent --get-zones
 
-# set default fw zone
-sudo firewall-cmd --set-default-zone=drop
+# view firewall zone config
+firewall-cmd --zone=public --list-all
+
+# set firewall zone
+firewall-cmd --zone=drop --change-interface=eth0
+
+# set default firewall zone
+firewall-cmd --set-default-zone=drop
 
 # add services
-sudo firewall-cmd --zone=dmz --add-service=ssh --permanent
+firewall-cmd --zone=dmz --add-service=ssh --permanent
 
 # create zone
-sudo firewall-cmd --permanent --new-zone=test
+firewall-cmd --permanent --new-zone=test
 
 # add rich rule
-sudo firewall-cmd --permanent --zone=test --add-rich-rule='rule family=ipv4 source address=x.x.x.x accept'
+firewall-cmd --permanent --zone=test --add-rich-rule='rule family=ipv4 source address=x.x.x.x accept'
 
 # restrict by IP
 remove interface (or move to other zone), now add source to zone
+firewall-cmd --zone=test --add-source=x.x.x.x/xx
 
-sudo firewall-cmd --zone=test --add-source=x.x.x.x/xx
+
