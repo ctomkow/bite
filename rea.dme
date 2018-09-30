@@ -1,26 +1,42 @@
 # structure of howto's
-[domain].[program].[action]
+[domain].[app|lib|api|role].[action]
 
 # only 3 levels deep!
-# there are pre-defined names for each level. DO NOT STRAY FROM THEM.
 
-# Example
+# example
 ver.git.oft
 
-# Domains
-net
-src
-ver
-dbs
-vir
-sys
+### DOMAIN
+dbs # database
+dev # developer snippets
+dop # devOps
+net # networking
+rea # readme
+sec # security
+src # source code
+sys # systems
+ver # version control
+vir # virtual systems
 
-# Program
-git
-iptables
+### APPLICATION|LIBRARY|API|ROLE
+""
+admin
+docker
+daemon
+docker
 firewalld
+git
+iked
+iptables
+kernel
+kvm
+mysql
+snmp
+startup
+python
+tcpdump
 
-# Action
-oft # often used commands
-init # initialize the program
+### ACTION
+oft  # often used commands
+init # initialization
 
