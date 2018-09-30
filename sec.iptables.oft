@@ -1,11 +1,18 @@
-# add rule to specific line number
-sudo iptables -I FORWARD 9 -i tap0 -o virbr0 -j ACCEPT
-
-# delete rule
-sudo iptables -D FORWARD 9
+##### IPTABLES #####
+#
+# tables: chains
+FILTER: PREROUTING, FORWARD, POSTROUTING
+NAT   : PREROUTING, INPUT, OUTPUT, POSTROUTING
+MANGLE: PREROUTING, INPUT, FORWARD, OUTPUT, POSTROUTING
 
 # list rules in detail
-sudo iptables -L FORWARD -n -v --line-numbers
+sudo iptables -L <chain> -n -v --line-numbers
+
+# add rule to specific line number
+sudo iptables -I <chain> 9 -i tap0 -o virbr0 -j ACCEPT
+
+# delete rule
+sudo iptables -D <chain> 9
 
 # deny icmp on ufw
 sudo iptables -I ufw-before-input 5 -i br0 -p icmp -j DROP
