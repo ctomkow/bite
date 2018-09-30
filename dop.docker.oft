@@ -20,7 +20,7 @@ docker images
 docker run -t -d centos:6.9
 
 # run container for an instant dev env
-docker run -it -rm centos:7 bash
+docker run -it --rm centos:7 bash
 
 # stop container immediately
 docker stop -t0 <hash>
