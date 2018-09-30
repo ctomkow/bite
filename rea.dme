@@ -25,6 +25,7 @@ docker
 daemon
 docker
 firewalld
+get_cdp
 git
 iked
 iptables
@@ -40,5 +41,6 @@ tcpdump
 ### ACTION
 oft  # often used commands
 init # initialization
-c    # C code
+c    # C      code
 py   # python code
+sh   # shell  code
