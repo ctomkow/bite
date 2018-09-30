@@ -1,41 +1,51 @@
-# Add file to index, store index in new commit with comment, push commit to remote 
-git add <file>
-git commit -m "My code comments"
-git push -u origin master
+##### GIT #####
+#
+# status
+git status
 
-# List tracked files
+# list tracked files
 git ls-files
 
-# Show commit history
+# show commit history
 git log
 
-# Revert commit (that is NOT pushed)
+# revert commit (that is NOT pushed)
 git reset --hard <hash>
 
 # Show diff before commit
 git diff <file>
 
-# brach workflow
-local branch
-    <branch>/<name>
-    bug/foo
-    feat/bar
-    refac/fizz
-    wip/foobar
-    junk/barfoo
+# add file, commit, and push to remote
+git add <file>
+git commit -m "code comments"
+git push -u origin master
 
-# create branch and switch to it
-git checkout -b <branch_name>
+##### BRANCH #####
+#
+# list branches
+git branch
+
+# create branch
+git branch <branch_name>
 
 # change working branch
 git checkout <branch_name>
 
-# see all branches
-git branch
+# create branch and switch to it
+git checkout -b <branch_name>
+
+# branch naming workflow
+(local branch creation)
+    <branch_name>/<topic_name>
+    bug/foo
+    feat/bar
+    refac/fizz
+    wip/buzz
+    junk/foobarfizzbuzz
 
 # safe merge
-(dev branch)$ git merge master
+(dev branch) git merge master
 (resolve conflicts on dev branch)
 git checkout master
-git merge <dev-branch>
+git merge <branch_name>
 
