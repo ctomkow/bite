@@ -6,6 +6,9 @@ git status
 # list tracked files
 git ls-files
 
+# show remote url
+git remote show origin
+
 # show commit history
 git log
 
