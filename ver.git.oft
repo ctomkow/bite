@@ -26,6 +26,13 @@ git push -u origin master
 # remove file
 git rm <file>
 
+# update fork with upstream repo changes
+git remote add upstream <original_repo_url.git>
+git fetch upstream
+git checkout master
+git rebase upstream/master
+git push -f origin master
+
 ##### BRANCH #####
 #
 # list branches
