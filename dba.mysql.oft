@@ -1,7 +1,35 @@
 ##### MYSQL #####
 #
 # login
-mysql -u <user> -p
+mysql -u <user> -p<pass>
+
+# if ERROR 2002
+mysql -h 127.0.0.1 -u <user> -p<pass>
 
 # status
 mysqladmin -u <user> -p status
+
+# determine mysql engine in use (e.g. InnoDB, MyISAM)
+(select database)
+> SHOW TABLE STATUS;
+
+# list databases
+> SHOW DATABASES;
+
+# switch to database
+> USE <database>;
+
+# list tables
+> SHOW TABLES;
+
+# simple select of rows
+> SELECT * FROM <table> WHERE <x> = 'string';
+
+# specify column
+> SELECT <column> FROM <table> WHERE <x> = 'string';
+
+# simple delete rows
+> DELETE FROM <table> WHERE <x> = 'string';
+
+# backup live (mysql)InnoDB
+mysqldump -u<user> -p<pass> --single-transaction --routines --triggers --all-databases > backup_db.sql

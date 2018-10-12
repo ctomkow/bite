@@ -1,0 +1,20 @@
+##### https://dba.stackexchange.com/questions/19532/safest-way-to-perform-mysqldump-on-a-live-system-with-active-reads-and-writes/30847
+##### best for data that is MyISAM or mix of InnoDB/MyISAM
+
+#!/bin/bash
+
+DB=example
+DUMP_FILE=export.sql
+
+# Lock the database and sleep in background task
+mysql -u<user> -p<pass> $DB -e "FLUSH TABLES WITH READ LOCK; DO SLEEP(86400);" &
+sleep 3
+
+# Export the database while it is locked
+mysqldump -u<user> -p<pass> --opt $DB > $DUMP_FILE
+
+# When finished, kill the previous background task to unlock
+kill $! 2>/dev/null
+wait $! 2>/dev/null
+
+echo "Finished export, and unlocked !"

@@ -6,6 +6,10 @@ service <srvd> [start|stop|restart]
 # find package
 yum whatprovides *xxxxx.so
 
+# rollback install
+yum history
+yum history undo xxxxx
+
 ##### DEBIAN #####
 #
 # service mgmt - <= ubuntu 14.10
