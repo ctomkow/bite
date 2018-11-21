@@ -9,11 +9,20 @@ git ls-files
 # show remote url
 git remote show origin
 
+# list remotes
+git remote -v
+
+# change remote URL from HTTPS to SSH
+git remote set-url origin git@github.com:<username>/<repo>.git
+
 # show commit history
 git log
 
 # revert commit (that is NOT pushed)
 git reset --hard <hash>
+
+# undo git add
+git reset
 
 # Show diff before commit
 git diff <file>
