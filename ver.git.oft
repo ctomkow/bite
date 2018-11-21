@@ -33,6 +33,9 @@ git checkout master
 git rebase upstream/master
 git push -f origin master
 
+# checkout tag
+git checkout tags/<tag_name>
+
 ##### BRANCH #####
 #
 # list branches
@@ -40,6 +43,9 @@ git branch
 
 # create branch
 git branch <branch_name>
+
+# delete branch
+git branch -d <branch_name>
 
 # change working branch
 git checkout <branch_name>

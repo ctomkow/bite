@@ -36,6 +36,9 @@ firewall-cmd --set-default-zone=drop
 # add services
 firewall-cmd --zone=dmz --add-service=ssh --permanent
 
+# add port
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+
 # create zone
 firewall-cmd --permanent --new-zone=test
 

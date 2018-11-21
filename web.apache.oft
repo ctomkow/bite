@@ -1,0 +1,28 @@
+##### SSL Certificate Install Centos7
+#
+# self-generated cert
+openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout example.key -out example.crt -subj "/CN=example.com" -days 365
+
+# all about certs
+https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
+
+# ssl_cert and intermediate_cert location
+/etc/pki/tls/certs/
+
+# private key location
+/etc/pki/tls/private/
+
+# config file (wherever apache virtual host is for 443)
+/etc/httpd/conf.d/ssl.conf
+
+## Install process
+# 1. Edit conf file for intermediate cert
+SSLCertificateChainFile /etc/pki/tls/certs/IntermediateCA.crt
+
+sudo systemctl restart httpd
+
+# 2. Edit conf for end cert and key
+SSLCertificateFile /etc/pki/tls/certs/ssl_certificate.crt
+SSLCertificateKeyFile /etc/pki/tls/private/privateKey.key
+
+sudo systemctl restart httpd

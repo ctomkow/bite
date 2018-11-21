@@ -1,0 +1,6 @@
+# new git repo and connect to github
+
+git init
+[create repo in github]
+git remote add origin https://github.com:<username>/<repo_name>
+git push -u origin master

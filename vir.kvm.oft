@@ -26,8 +26,10 @@ br0    # bridged (vm get's own ip)
 # add share between guest and host
 https://xapax.github.io/blog/2017/05/09/sharing-files-kvm.html
 
-# resize disk, partition
+# resize disk, partition (centos7, XFS)
+# shutdown guest (on host)
 sudo qemu-img resize /var/lib/libvirt/images/<name>.qcow2 +10G
+# boot up guest (on guest)
 https://sandilands.info/sgordon/increasing-kvm-virtual-machine-disk-using-lvm-ext4
 instead of resize2fs...
 https://ma.ttias.be/increase-expand-xfs-filesystem-in-red-hat-rhel-7-cento7/

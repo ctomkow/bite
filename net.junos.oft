@@ -1,0 +1,51 @@
+# junos help
+help topic <x> <y>
+help reference <x> <y>
+help reference interfaces address
+
+# config management
+configure [<x> <y> <z>]
+commit [check|confirmed|comment]
+rollback <n>, commit
+rollback 0 # discard non-committed changes
+show | compare # diff
+[save|load]
+
+# config manipulation
+edit [<cmd> <sub-cmd> <ssub-cmd> <sssub-cmd> ...]
+
+[<up>|<up n>|top]
+
+[set|delete]
+set interface ge-0/0/1 disable
+delete interface ge-0/0/1 disable
+
+<disable> # admin disabled
+<deactivate> # ignore configuration
+
+# filesystem
+/var/home/$USER # default user working dir
+
+# restart while maintaining power
+request system halt
+request system halt both-routing-engines
+
+# logging
+/var/log/messages
+show log messages
+
+# snmp
+show snmp mib walk <subtree>
+
+# live stats of iface
+monitor interface <iface>
+
+# tcpdump of control-plane traffic
+monitor traffic interface <iface> [<options>]
+
+# software upgrade
+request system software add /var/tmp/<image> reboot
+
+
+
+

@@ -1,2 +1,18 @@
 # set kernel parameters on boot - Debian
 /etc/sysctl.d/*.conf
+
+# Build kernel package on Centos/Redhat
+sudo yum install -y git gcc ncurses ncurses-devel bison flex elfutils-libelf-devel bc openssl-devel rpm-build
+sudo yum update
+sudo yum install -y kernel kernel-devel
+
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+cd linux
+git checkout tags/v4.19
+make mrproper
+make menucnofig
+make rpm-pkg -j4
+cd ../rpmbuild/RPMS/x86_64
+sudo yum install kernel-*.rpm
+
+

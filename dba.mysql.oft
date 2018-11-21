@@ -33,3 +33,6 @@ mysqladmin -u <user> -p status
 
 # backup live (mysql)InnoDB
 mysqldump -u<user> -p<pass> --single-transaction --routines --triggers --all-databases > backup_db.sql
+
+# backup table only
+mysqldump -u<user> -p<pass> <db_name> <table_name> > db_table_name.sql

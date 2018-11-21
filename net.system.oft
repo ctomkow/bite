@@ -2,6 +2,8 @@
 #
 # restart ubuntu networking
 service network-manager restart
+nmcli radio wifi <off|on>
+<ifdown|ifup> <iface> # only if iface defined in /etc/network/interfaces
 
 # restart centos networking
 service network restart
@@ -25,3 +27,6 @@ netstat -l
 
 # enable routing (ip_forwarding)
 echo "1" | sudo dd of=/proc/sys/net/ipv4/ip_forward
+
+# view active connection tracking
+conntrack -L

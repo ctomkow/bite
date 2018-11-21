@@ -23,6 +23,7 @@ apt-cache search xxxxx
 #
 # display OS info
 lsb_release -d
+cat /etc/os-release
 
 # service mgmt (systemd) >= centos7/ubuntu 15.04
 systemctl [start|stop|restart] <srvd>
@@ -36,7 +37,7 @@ stat <file>
 du -sh <directory>
 
 # diff two folders
-diff --brief -r <dirA>/ <dirB>/
+diff --brief --color -u -r <dirA>/ <dirB>/
 
 # diff folder structure
 vimdiff <(cd dirA; find . | sort) <(cd dirB; find . | sort)

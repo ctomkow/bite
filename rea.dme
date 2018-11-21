@@ -29,6 +29,7 @@ get_cdp
 git
 iked
 iptables
+junos
 kernel
 kvm
 mysql
