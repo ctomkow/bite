@@ -1,5 +1,8 @@
 ##### CENTOS #####
 #
+#display OS info
+rpm -q centos-release
+
 # service mgmt - centos 6
 service <srvd> [start|stop|restart]
 
