@@ -23,3 +23,11 @@ sudo iptables -I ufw-before-input 5 -i br0 -p icmp -j DROP
 # save iptables rules ubuntu >= 16.04
 apt-get install iptables-persistent
 netfilter-persistent save
+
+# save iptables rules centos6
+service iptables save
+
+# activate iptables rules centos6
+service iptables restart
+
+

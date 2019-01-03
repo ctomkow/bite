@@ -6,6 +6,10 @@ rpm -q centos-release
 # service mgmt - centos 6
 service <srvd> [start|stop|restart]
 
+# start service on boot - centos 6
+chkconfig <srvd> on
+chkconfig <srvd> <levels>
+
 # find package
 yum whatprovides *xxxxx.so
 
@@ -47,6 +51,9 @@ vimdiff <(cd dirA; find . | sort) <(cd dirB; find . | sort)
 
 # copy remote files
 scp user@remote.host:/path/to/file /local/dir
+
+# copy from local to remote
+scp /local/dir user@remote.host:/path/to/file
 
 ##### USERS
 #
