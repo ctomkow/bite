@@ -3,7 +3,7 @@ rpm -q centos-release # os info, os version | centos
 service <srvd> [start|stop|restart] # start service, stop service, restart service | centos6
 chkconfig <srvd> on # start service on boot | centos6
 chkconfig <srvd> <levels> # start service on boot | centos6
-yum whatprovides *xxxxx.so # find package yum package | centos
+yum whatprovides *xxxxx.so # find package yum package yum search | centos
 yum history # yum updates
 yum history undo xxxxx # undo yum update
 
