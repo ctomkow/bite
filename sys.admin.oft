@@ -55,6 +55,9 @@ scp user@remote.host:/path/to/file /local/dir
 # copy from local to remote
 scp /local/dir user@remote.host:/path/to/file
 
+# search within all files
+grep -rnwi '/path/to/dir' -e 'pattern'
+
 ##### USERS
 #
 # add user and create home dir
