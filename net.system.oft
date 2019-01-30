@@ -30,3 +30,5 @@ echo "1" | sudo dd of=/proc/sys/net/ipv4/ip_forward
 
 # view active connection tracking
 conntrack -L
+
+nmtui # set ip address, gateway, hostname, dns graphically

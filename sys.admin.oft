@@ -1,3 +1,6 @@
+##### RED HAT (RHEL) #####
+https://linuxconfig.org/enable-subscription-management-repositories-on-redhat-8-linux # manage subscription
+
 ##### CENTOS #####
 rpm -q centos-release # os info, os version | centos
 service <srvd> [start|stop|restart] # start service, stop service, restart service | centos6
@@ -5,7 +8,7 @@ chkconfig <srvd> on # start service on boot | centos6
 chkconfig <srvd> <levels> # start service on boot | centos6
 yum whatprovides *xxxxx.so # find package yum package yum search | centos
 yum history # yum updates
-yum history undo xxxxx # undo yum update
+yum history rollback <transactionID> # rollback to previous transaction state
 
 ##### DEBIAN #####
 [start|stop|restart] <srvd> # start service, stop service, restart service | <= ubuntu 14.10
@@ -24,6 +27,8 @@ vimdiff <(cd dirA; find . | sort) <(cd dirB; find . | sort) # diff two folder st
 scp user@remote.host:/path/to/file /local/dir # scp copy remote files
 scp /local/dir user@remote.host:/path/to/file # scp copy from local to remote
 grep -rnwi '/path/to/dir' -e 'pattern' # grep search inside all files
+df -Th # show filesystem type
+sudo tar -czvpf <dir_name>.tar.gz <dir_to_backup> # compress and backup a folder/directory
 
 ##### USER MANAGEMENT #####
 adduser <user> # add user and create home directory

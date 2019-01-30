@@ -1,0 +1,2 @@
+
+crontab permissions (in var/spool/cron) have to be only read/write/exec by owner of crontab. chmod 600 <crontab file>

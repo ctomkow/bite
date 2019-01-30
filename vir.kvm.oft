@@ -6,6 +6,9 @@ virsh list --all
 # start, stop, forcibly stop VMs
 virsh [start|shutdown|destroy] <vm_desc>
 
+virsh list --autostart # view VMs that will autostart / start on boot
+virsh list --no-autostart # view VMs that will not autostart / not start on boot
+
 # connect to VM 
 virsh console [vm_desc|id]
 

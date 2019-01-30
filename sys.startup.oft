@@ -10,6 +10,8 @@ vm-traffic-no-traverse-iptables.service
 # e.g.
 blah blah
 
+systemctl daemon-reload # reload systemd configuration
+
 # script
 asdf
 
