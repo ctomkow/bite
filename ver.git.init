@@ -3,5 +3,5 @@
 git init
 [create repo in github]
 git remote add origin https://github.com/<username>/<repo_name>  OR
-git remote add origin git@github.com:ctomkow/haveibeenpwned
+git remote add origin git@github.com:/<username>/<repo_name>
 git push -u origin master
