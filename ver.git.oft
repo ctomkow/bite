@@ -21,6 +21,8 @@ git log
 # revert commit (that is NOT pushed)
 git reset --hard <hash>
 
+git reset HEAD~1 --soft # undo a commit that has not been pushed, keep changes
+
 # undo git add
 git reset
 

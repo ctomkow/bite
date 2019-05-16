@@ -31,6 +31,8 @@ mysqladmin -u <user> -p status
 # simple delete rows
 > DELETE FROM <table> WHERE <x> = 'string';
 
+> SHOW CREATE TABLE <table_name>; # show database table schema
+
 # backup live (mysql)InnoDB
 mysqldump -u<user> -p<pass> --single-transaction --routines --triggers --all-databases > backup_db.sql
 
