@@ -1,0 +1,14 @@
+# setup CPAN
+sudo yum install cpan
+cpan
+o conf make_install_make_command 'sudo make'
+o conf mbuild_install_build_command 'sudo ./Build'
+o conf prerequisites_policy 'follow'
+o conf build_requires_install_policy yes
+o conf commit
+
+cpan XX::XX # install libraries as user
+
+# OR ...
+cpan install App::cpanminus
+cpanm XX:XX

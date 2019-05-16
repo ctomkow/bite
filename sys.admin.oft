@@ -9,6 +9,8 @@ chkconfig <srvd> <levels> # start service on boot | centos6
 yum whatprovides *xxxxx.so # find package yum package yum search | centos
 yum history # yum updates
 yum history rollback <transactionID> # rollback to previous transaction state
+rpm -ivh <package> # install RPM directly
+rpm -Uvh <package> # upgrade RPM directly
 
 ##### DEBIAN #####
 [start|stop|restart] <srvd> # start service, stop service, restart service | <= ubuntu 14.10
