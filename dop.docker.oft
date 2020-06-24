@@ -43,3 +43,10 @@ docker rm $(docker ps -aq)
 # delete all images
 docker rmi $(docker images -q)
 
+# docker build
+docker build -t lg-backend:0.1 .
+
+# docker run
+docker run -d --name lg-backend lg-backend:0.1
+
+

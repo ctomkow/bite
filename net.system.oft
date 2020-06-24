@@ -32,3 +32,11 @@ echo "1" | sudo dd of=/proc/sys/net/ipv4/ip_forward
 conntrack -L
 
 nmtui # set ip address, gateway, hostname, dns graphically
+
+# tunnel GIT SSH commands through a HTTPS tunnel terminated at a jump box
+https://randyfay.com/content/git-over-ssh-tunnel-through-firewall-or-vpn
+
+ssh -L3333:git.example.com:22 you@proxy.example.com
+git clone ssh://git@localhost:3333/example.git
+
+
